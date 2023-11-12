@@ -1,0 +1,14 @@
+D:\Codding\Демо\Вариант 6\Товары_для_животных\bin\Debug\Товары_для_животных.exe.config
+D:\Codding\Демо\Вариант 6\Товары_для_животных\bin\Debug\Товары_для_животных.exe
+D:\Codding\Демо\Вариант 6\Товары_для_животных\bin\Debug\Товары_для_животных.pdb
+D:\Codding\Демо\Вариант 6\Товары_для_животных\obj\Debug\Товары_для_животных.csproj.AssemblyReference.cache
+D:\Codding\Демо\Вариант 6\Товары_для_животных\obj\Debug\Товары_для_животных.Autorization.resources
+D:\Codding\Демо\Вариант 6\Товары_для_животных\obj\Debug\Товары_для_животных.Properties.Resources.resources
+D:\Codding\Демо\Вариант 6\Товары_для_животных\obj\Debug\Товары_для_животных.csproj.GenerateResource.cache
+D:\Codding\Демо\Вариант 6\Товары_для_животных\obj\Debug\Товары_для_животных.csproj.CoreCompileInputs.cache
+D:\Codding\Демо\Вариант 6\Товары_для_животных\obj\Debug\Товары_для_животных.exe
+D:\Codding\Демо\Вариант 6\Товары_для_животных\obj\Debug\Товары_для_животных.pdb
+D:\Codding\Демо\Вариант 6\Товары_для_животных\obj\Debug\Товары_для_животных.ProductForm.resources
+D:\Codding\Демо\Вариант 6\Товары_для_животных\obj\Debug\Товары_для_животных.AdminForm.resources
+D:\Codding\Демо\Вариант 6\Товары_для_животных\obj\Debug\Товары_для_животных.UI.uc_Product.resources
+D:\Codding\Демо\Вариант 6\Товары_для_животных\obj\Debug\Товары_для_животных.Forms.AddCreateForm.resources
