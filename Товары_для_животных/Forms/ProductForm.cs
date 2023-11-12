@@ -37,7 +37,6 @@ namespace Товары_для_животных
                 if (box_Filter.Items.Contains(table.Rows[i][6].ToString()) == false)
                     box_Filter.Items.Add(table.Rows[i][6].ToString());
             }
-
             UC_Load();
         }
         /// <summary>
