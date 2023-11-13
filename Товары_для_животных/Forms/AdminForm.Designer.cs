@@ -76,17 +76,18 @@
             // 
             // box_Filter
             // 
+            this.box_Filter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.box_Filter.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.box_Filter.FormattingEnabled = true;
             this.box_Filter.Location = new System.Drawing.Point(720, 5);
             this.box_Filter.Name = "box_Filter";
             this.box_Filter.Size = new System.Drawing.Size(220, 31);
             this.box_Filter.TabIndex = 16;
-            this.box_Filter.Text = "Все производители";
             this.box_Filter.SelectedIndexChanged += new System.EventHandler(this.box_Filter_SelectedIndexChanged);
             // 
             // box_Sort
             // 
+            this.box_Sort.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.box_Sort.Font = new System.Drawing.Font("Comic Sans MS", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.box_Sort.FormattingEnabled = true;
             this.box_Sort.Items.AddRange(new object[] {
@@ -97,7 +98,6 @@
             this.box_Sort.Name = "box_Sort";
             this.box_Sort.Size = new System.Drawing.Size(220, 31);
             this.box_Sort.TabIndex = 15;
-            this.box_Sort.Text = "Без сортировки";
             this.box_Sort.SelectedIndexChanged += new System.EventHandler(this.box_Sort_SelectedIndexChanged);
             // 
             // box_Search
