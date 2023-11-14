@@ -22,3 +22,35 @@ begin
 end;
 
 execute sp_FilterSort 'Все производители','0',''
+
+create proc sp_AddCreate
+@selectAddCreate nvarchar(50),@ID int,@Name nvarchar(100),@Desc nvarchar(max),@Manuf nvarchar(50),@Cost int
+as
+begin
+	set nocount on;
+	if @selectAddCreate = 'add'
+	begin
+		insert into Products(ProductID,ProductName,ProductDescription,ProductManufacturer,ProductCost)
+		values(@ID,@Name,@Desc,@Manuf,@Cost);
+	end
+	else if @selectAddCreate = 'update'
+	begin
+		update Products
+		set ProductName = @Name,
+			ProductDescription = @Desc,
+			ProductManufacturer = @Manuf,
+			ProductCost = @Cost
+			where ProductID = @ID;
+	end
+end;
+
+execute sp_AddCreate 'add','31','test','test2','test','555'
+
+alter proc sp_Delete
+@ID int
+as
+begin
+	delete from Products where ProductID = @ID
+end
+
+execute sp_Delete '31'
