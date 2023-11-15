@@ -32,6 +32,7 @@
             this.lbl_Title = new System.Windows.Forms.Label();
             this.lbl_Name = new System.Windows.Forms.Label();
             this.pnl_Box = new System.Windows.Forms.Panel();
+            this.lbl_Exit = new System.Windows.Forms.Label();
             this.box_Visit = new System.Windows.Forms.Label();
             this.check_Password = new System.Windows.Forms.CheckBox();
             this.btn_Enter = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.box_Password = new System.Windows.Forms.TextBox();
             this.box_Login = new System.Windows.Forms.TextBox();
             this.box_Image = new System.Windows.Forms.PictureBox();
-            this.lbl_Exit = new System.Windows.Forms.Label();
             this.pnl_Box.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.box_Image)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +81,19 @@
             this.pnl_Box.Name = "pnl_Box";
             this.pnl_Box.Size = new System.Drawing.Size(450, 710);
             this.pnl_Box.TabIndex = 2;
+            // 
+            // lbl_Exit
+            // 
+            this.lbl_Exit.AutoSize = true;
+            this.lbl_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Exit.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(140)))), ((int)(((byte)(81)))));
+            this.lbl_Exit.Location = new System.Drawing.Point(340, 10);
+            this.lbl_Exit.Name = "lbl_Exit";
+            this.lbl_Exit.Size = new System.Drawing.Size(90, 33);
+            this.lbl_Exit.TabIndex = 9;
+            this.lbl_Exit.Text = "Выйти";
+            this.lbl_Exit.Click += new System.EventHandler(this.lbl_Exit_Click);
             // 
             // box_Visit
             // 
@@ -173,19 +186,6 @@
             this.box_Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.box_Image.TabIndex = 3;
             this.box_Image.TabStop = false;
-            // 
-            // lbl_Exit
-            // 
-            this.lbl_Exit.AutoSize = true;
-            this.lbl_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_Exit.Font = new System.Drawing.Font("Comic Sans MS", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl_Exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(140)))), ((int)(((byte)(81)))));
-            this.lbl_Exit.Location = new System.Drawing.Point(180, 530);
-            this.lbl_Exit.Name = "lbl_Exit";
-            this.lbl_Exit.Size = new System.Drawing.Size(106, 39);
-            this.lbl_Exit.TabIndex = 9;
-            this.lbl_Exit.Text = "Выйти";
-            this.lbl_Exit.Click += new System.EventHandler(this.lbl_Exit_Click);
             // 
             // Autorization
             // 

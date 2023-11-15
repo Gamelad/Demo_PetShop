@@ -23,17 +23,17 @@ end;
 
 execute sp_FilterSort 'Все производители','0',''
 
-create proc sp_AddCreate
+alter proc sp_AddCreate
 @selectAddCreate nvarchar(50),@ID int,@Name nvarchar(100),@Desc nvarchar(max),@Manuf nvarchar(50),@Cost int
 as
 begin
 	set nocount on;
-	if @selectAddCreate = 'add'
+	if @selectAddCreate = 'Add'
 	begin
 		insert into Products(ProductID,ProductName,ProductDescription,ProductManufacturer,ProductCost)
 		values(@ID,@Name,@Desc,@Manuf,@Cost);
 	end
-	else if @selectAddCreate = 'update'
+	else if @selectAddCreate = 'Create'
 	begin
 		update Products
 		set ProductName = @Name,
@@ -44,7 +44,8 @@ begin
 	end
 end;
 
-execute sp_AddCreate 'add','31','test','test2','test','555'
+execute sp_AddCreate 'add','','test','test2','test','555'
+execute sp_AddCreate 'Create','1','Лакомство','Лакомство для кошек Dreamies Подушечки с курицей, 140 г','Dreames','124'
 
 alter proc sp_Delete
 @ID int
@@ -53,4 +54,4 @@ begin
 	delete from Products where ProductID = @ID
 end
 
-execute sp_Delete '31'
+execute sp_Delete '0'

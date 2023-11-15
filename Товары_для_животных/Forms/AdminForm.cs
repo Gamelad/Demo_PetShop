@@ -82,16 +82,40 @@ namespace Товары_для_животных
         {
             UC_Load();
         }
+        
+        public static class AddCreate
+        {
+            public static string Value;
+        }
 
         private void btn_Add_Click(object sender, EventArgs e)
-        {         
+        {
+            AddCreate.Value = "Add";
             AddCreateForm addCreateForm = new AddCreateForm();
             addCreateForm.ShowDialog();
+            UC_Load();
         }
 
         private void btn_Delete_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Товар не выбран", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            try
+            {
+                db_Connect.toDB($"execute sp_Delete '{Product.ID}'");
+                MessageBox.Show("Товар успешно удален", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                UC_Load();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка: {ex}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_Create_Click(object sender, EventArgs e)
+        {
+            AddCreate.Value = "Create";
+            AddCreateForm addCreateForm = new AddCreateForm();
+            addCreateForm.ShowDialog();
+            UC_Load();
         }
     }
 }

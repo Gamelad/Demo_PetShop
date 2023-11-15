@@ -149,7 +149,7 @@
             this.btn_Create.TabIndex = 19;
             this.btn_Create.Text = "Изменить";
             this.btn_Create.UseVisualStyleBackColor = false;
-            this.btn_Create.Click += new System.EventHandler(this.btn_Add_Click);
+            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
             // 
             // btn_Delete
             // 
