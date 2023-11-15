@@ -22,6 +22,11 @@ namespace Товары_для_животных.UI
             InitializeComponent();
         }
 
+        public static class Product
+        {
+            public static int ID;
+        }
+
         private void uc_Product_Load(object sender, EventArgs e)
         {
             try
@@ -29,6 +34,7 @@ namespace Товары_для_животных.UI
                 DataTable table = db_Connect.fromDB($"select*from Products where ProductID = {a_id}");
                 for (int i = 0;  i < table.Rows.Count; i++)
                 {
+                    lbl_ID.Text = $"{table.Rows[i][0]}";
                     lbl_Name.Text = $"{table.Rows[i][2]}";
                     lbl_Desc.Text = $"{table.Rows[i][11]}";
                     lbl_Manuf.Text += $" {table.Rows[i][6]}";
@@ -43,11 +49,20 @@ namespace Товары_для_животных.UI
                         box_Image.Image = Image.FromFile($@"Images\{table.Rows[i][12]}");
                     }               
                 }
+                if (Role.ID == 1)
+                {
+                    box_Check.Visible = true;
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка: {ex}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void box_Check_CheckedChanged(object sender, EventArgs e)
+        {
+            Product.ID = Convert.ToInt32(lbl_ID.Text);
         }
     }
 }

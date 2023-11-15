@@ -35,6 +35,8 @@
             this.lbl_Cost = new System.Windows.Forms.Label();
             this.group_box = new System.Windows.Forms.GroupBox();
             this.lbl_Count = new System.Windows.Forms.Label();
+            this.box_Check = new System.Windows.Forms.CheckBox();
+            this.lbl_ID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.box_Image)).BeginInit();
             this.group_box.SuspendLayout();
             this.SuspendLayout();
@@ -115,12 +117,37 @@
             this.lbl_Count.TabIndex = 9;
             this.lbl_Count.Text = "шт";
             // 
+            // box_Check
+            // 
+            this.box_Check.AutoSize = true;
+            this.box_Check.Location = new System.Drawing.Point(950, 136);
+            this.box_Check.Name = "box_Check";
+            this.box_Check.Size = new System.Drawing.Size(22, 21);
+            this.box_Check.TabIndex = 10;
+            this.box_Check.UseVisualStyleBackColor = true;
+            this.box_Check.Visible = false;
+            this.box_Check.CheckedChanged += new System.EventHandler(this.box_Check_CheckedChanged);
+            // 
+            // lbl_ID
+            // 
+            this.lbl_ID.AutoSize = true;
+            this.lbl_ID.BackColor = System.Drawing.Color.White;
+            this.lbl_ID.Font = new System.Drawing.Font("Comic Sans MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbl_ID.Location = new System.Drawing.Point(955, 5);
+            this.lbl_ID.Name = "lbl_ID";
+            this.lbl_ID.Size = new System.Drawing.Size(37, 28);
+            this.lbl_ID.TabIndex = 11;
+            this.lbl_ID.Text = "ID";
+            this.lbl_ID.Visible = false;
+            // 
             // uc_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.lbl_ID);
+            this.Controls.Add(this.box_Check);
             this.Controls.Add(this.group_box);
             this.Controls.Add(this.lbl_Cost);
             this.Controls.Add(this.lbl_Manuf);
@@ -147,5 +174,7 @@
         private System.Windows.Forms.Label lbl_Cost;
         private System.Windows.Forms.GroupBox group_box;
         private System.Windows.Forms.Label lbl_Count;
+        private System.Windows.Forms.CheckBox box_Check;
+        private System.Windows.Forms.Label lbl_ID;
     }
 }

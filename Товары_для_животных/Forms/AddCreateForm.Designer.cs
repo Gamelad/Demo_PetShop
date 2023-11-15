@@ -374,7 +374,9 @@
             this.MaximumSize = new System.Drawing.Size(695, 670);
             this.MinimumSize = new System.Drawing.Size(695, 670);
             this.Name = "AddCreateForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Окно добавления/редактирования товара";
+            this.Load += new System.EventHandler(this.AddCreateForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

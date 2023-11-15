@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Товары_для_животных.UI.uc_Product;
 
 namespace Товары_для_животных.Forms
 {
@@ -28,6 +29,11 @@ namespace Товары_для_животных.Forms
         private void btn_Save_Click(object sender, EventArgs e)
         {
             MessageBox.Show($"На данный момент функция отсутствует", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void AddCreateForm_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show(Product.ID.ToString());
         }
     }
 }

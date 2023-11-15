@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Товары_для_животных.Forms;
 using Товары_для_животных.UI;
+using static Товары_для_животных.UI.uc_Product;
 
 namespace Товары_для_животных
 {
@@ -83,7 +84,7 @@ namespace Товары_для_животных
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
-        {
+        {         
             AddCreateForm addCreateForm = new AddCreateForm();
             addCreateForm.ShowDialog();
         }

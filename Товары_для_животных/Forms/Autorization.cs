@@ -17,6 +17,11 @@ namespace Товары_для_животных
             InitializeComponent();
         }
 
+        public static class Role
+        {
+            public static int ID;
+        }
+
         private void check_Password_CheckedChanged(object sender, EventArgs e)
         {
             box_Password.UseSystemPasswordChar = !box_Password.UseSystemPasswordChar;
@@ -44,6 +49,7 @@ namespace Товары_для_животных
                             case 1:
                                 MessageBox.Show($"Добро пожаловать, {table.Rows[i][2]} {table.Rows[i][3]}!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 open = true;
+                                Role.ID = 1;
                                 AdminForm adminForm = new AdminForm();
                                 adminForm.Show();
                                 this.Hide();
@@ -51,6 +57,7 @@ namespace Товары_для_животных
                             case 2:
                                 MessageBox.Show($"Добро пожаловать, {table.Rows[i][2]} {table.Rows[i][3]}!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 open = true;
+                                Role.ID = 0;
                                 ProductForm managForm = new ProductForm();
                                 managForm.Show();
                                 this.Hide();
@@ -58,6 +65,7 @@ namespace Товары_для_животных
                             case 3:
                                 MessageBox.Show($"Добро пожаловать, {table.Rows[i][2]} {table.Rows[i][3]}!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 open = true;
+                                Role.ID = 0;
                                 ProductForm productForm = new ProductForm();
                                 productForm.Show();
                                 this.Hide();
@@ -78,6 +86,7 @@ namespace Товары_для_животных
 
         private void box_Visit_Click(object sender, EventArgs e)
         {
+            Role.ID = 0;
             ProductForm productForm = new ProductForm();
             productForm.Show();
             this.Hide();
